@@ -1,20 +1,16 @@
 import React from 'react';
 import './App.css';
+import Header from './Header.js';
+import Techno from './Techno.js';
 
 const App = () => {
 return(
     <div>
-      <div>one div</div>
-      <div className="App">
-        <ul>
-          <li>css</li>
-          <li>html</li>
-          <li>js</li>
-          <li>react</li>
-        </ul>
-      </div>
+      <Header />
+      <Techno/>
   </div>
 );
 
 }
+
 export default App;

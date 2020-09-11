@@ -9,7 +9,7 @@ const Friends = (props) => {
     )
 
     return (
-        <div>
+        <div className={s.content}>
             {friendsElements}
         </div>
     );

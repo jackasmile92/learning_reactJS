@@ -27,7 +27,7 @@ const App = (props) => {
           */}
           <Route path="/dialogs" render={() => <Dialogs state = {props.state.dialogsPage} />} />
           <Route path="/profile" render={() => 
-            <Profile posts={props.state.profilePage.posts} addPost ={props.addPost}/>} />
+            <Profile profilePage={props.state.profilePage} addPost ={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
         </div>
       </div>
     </BrowserRouter>

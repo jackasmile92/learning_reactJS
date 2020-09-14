@@ -13,7 +13,6 @@ import Settings from './components/Settings/Settings';
 
 const App = (props) => {
   return (
-    <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
         <Navbar state = {props.state.siteBar}/>
@@ -30,7 +29,6 @@ const App = (props) => {
             <Profile profilePage={props.state.profilePage}  dispatch = {props.dispatch}/>} />
         </div>
       </div>
-    </BrowserRouter>
   );
 
 }

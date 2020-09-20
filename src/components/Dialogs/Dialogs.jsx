@@ -7,7 +7,7 @@ import { updateNewDialogTextActionCreator, addMessageActionCreator } from '../..
 
 
 const Dialogs = (props) => {
-    let state = props.store.getState().dialogsPage;
+    let state = props.dialogsPage;
 
     let dialogs = state.dialogs;
 
@@ -21,12 +21,12 @@ const Dialogs = (props) => {
 
     let newMessageElement = React.createRef();
     let addMessage = () => {
-        props.store.dispatch(addMessageActionCreator());
+        props.sendMessage();
     };
 
     let onDialogChange = () => {
-        let text = newMessageElement.current.value;
-        props.store.dispatch(updateNewDialogTextActionCreator(text) );
+        let body = newMessageElement.current.value;
+        props.updateNewMessageBody(body);
       };
 
     return (

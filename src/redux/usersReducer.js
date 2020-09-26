@@ -4,41 +4,7 @@ const SET_USERS = 'SET-USERS';
 
 
 let initialState = {
-    users: [
-        {
-            id: 1,
-            photoUrl:'https://i.pinimg.com/564x/27/a7/d4/27a7d43fd28cfffea5452f3d91547a56--daffy-duck-looney-tunes.jpg',
-            followed: false,
-            fullName: 'Dimitry',
-            status: 'I am a boss',
-            location: {
-                city: 'Minsk',
-                county: 'Belarus'
-            }
-        },
-        {
-            id: 2,
-            photoUrl:'https://i.pinimg.com/564x/27/a7/d4/27a7d43fd28cfffea5452f3d91547a56--daffy-duck-looney-tunes.jpg',
-            followed: true,
-            fullName: 'Sasha',
-            status: 'I am a boss too',
-            location: {
-                city: 'Moscow',
-                county: 'Russia'
-            }
-        },
-        {
-            id: 3,
-            photoUrl:'https://i.pinimg.com/564x/27/a7/d4/27a7d43fd28cfffea5452f3d91547a56--daffy-duck-looney-tunes.jpg',
-            followed: false,
-            fullName: 'Andrew',
-            status: 'I am a boss too',
-            location: {
-                city: 'Kiev',
-                county: 'Ukrain'
-            }
-        }
-    ]
+    users:[]
 }
 
 const usersReducer = (state = initialState, action) => {

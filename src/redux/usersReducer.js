@@ -50,7 +50,7 @@ const usersReducer = (state = initialState, action) => {
         case SET_CURRENT_PAGE:
             return {
                 ...state,
-                totalUsersCount: action.currentPage
+                currentPage: action.currentPage
             }
         default: return state;
     }

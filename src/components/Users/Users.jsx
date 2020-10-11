@@ -30,29 +30,32 @@ let Users = (props) => {
                             <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.userPhoto} />
                         </NavLink> </div>
                     <div>
-                        {u.followed
-                            ? <button onClick={() => {
+                        {
+                            u.followed
+                                ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                                    props.toggleIsFollowingProgress(true, u.id);
+                                    userAPI.unfollow(u.id).then(response => {
 
-                                userAPI.unfollow(u.id).then(response => {
+                                        if (response.resultCode === 0) {
 
-                                    if (response.resultCode === 0) {
-
-                                        props.unfollow(u.id);
+                                            props.unfollow(u.id);
+                                        }
+                                        props.toggleIsFollowingProgress(false, u.id);
                                     }
-                                }
-                                );                             
-                            }}>Unfollow</button>
-                            : <button onClick={() => {
-
-                                userAPI.follow(u.id).then(response => {
+                                    );
+                                }}>Unfollow</button>
+                                : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                                    props.toggleIsFollowingProgress(true, u.id);
+                                    userAPI.follow(u.id).then(response => {
 
                                         if (response.resultCode === 0) {
 
                                             props.follow(u.id);
                                         }
+                                        props.toggleIsFollowingProgress(false, u.id);
                                     }
                                     );
-                            }}>Follow</button>}
+                                }}>Follow</button>}
 
                     </div>
                 </span>

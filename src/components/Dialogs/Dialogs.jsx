@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Dialogs.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import DialogItem from './DialogItem/DialogItem.jsx';
 import Message from './Message/Message.jsx';
 import { updateNewDialogTextActionCreator, addMessageActionCreator } from '../../redux/dialogsReducer';
@@ -28,6 +28,8 @@ const Dialogs = (props) => {
         let body = newMessageElement.current.value;
         props.updateNewMessageBody(body);
       };
+
+    if (!props.isAuth) return <Redirect to={'/login'}/>;
 
     return (
         <div className={s.dialogs}>

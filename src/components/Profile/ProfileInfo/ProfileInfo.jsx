@@ -12,7 +12,7 @@ if(!props.profile){
     <div className={s.content}>
        <div className={s.descriptionBlock}>
         <img src={props.profile.photos.large} alt=""/>
-        <ProfileStatus status={"HELLO"}/>
+        <ProfileStatus status={props.status} updateStatus ={props.updateStatus}/>
       </div>
     </div>
   );

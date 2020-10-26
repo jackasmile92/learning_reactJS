@@ -18,8 +18,8 @@ let mapDispatchToProps = (dispatch) => {
         updateNewMessageBody: (text) => {
             dispatch(updateNewDialogTextActionCreator(text));
         },
-        sendMessage: () => {
-            dispatch(addMessageActionCreator());
+        sendMessage: (newMessageBody) => {
+            dispatch(addMessageActionCreator(newMessageBody));
         }
     }
 }

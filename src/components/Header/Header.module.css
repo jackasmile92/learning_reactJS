@@ -2,13 +2,18 @@
 .header {
     grid-area: h;
     background-color: darkgreen;
+
   }
   
   .header img {
     width: 20px
   }
   
-  .loginBlock a{
+
+  .loginBlock{
     float: right;
+  }
+  .loginBlock a{
+    
     color: white;
   }

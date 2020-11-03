@@ -20,7 +20,7 @@ class UsersContainer extends React.Component {
     }
 
     render() {
-        if (!this.props.isAuth) return <Redirect to={'/login'} />;
+       // if (!this.props.isAuth) return <Redirect to={'/login'} />;
         return <>
             {this.props.isFetching ? <Preloader /> : null}
             <Users totalUsersCount={this.props.totalUsersCount}
@@ -58,6 +58,5 @@ export default compose(connect(mapStateToProps,
         setCurrentPage,
         getUsers
     }
-),
-    withAuthRedirect
+)
 )(UsersContainer);

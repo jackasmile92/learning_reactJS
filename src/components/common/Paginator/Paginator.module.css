@@ -1,0 +1,12 @@
+.userPhoto{
+    width: 100px;
+    height: auto;
+}
+.selectedPage{
+    font-weight: bold;
+}
+
+.preloader{
+    width: 30px;
+    height: auto;
+}
